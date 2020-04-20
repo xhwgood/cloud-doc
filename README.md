@@ -6,5 +6,5 @@
 
 图片预览：
 
-![图片](http://cdn.xianghw.xyz/%E4%B8%83%E7%89%9B%E4%BA%91%E6%96%87%E6%A1%A3.png)
-![设置](http://cdn.xianghw.xyz/%E4%BA%91%E6%96%87%E6%A1%A3-%E8%AE%BE%E7%BD%AE.png)
+![图片](https://github.com/xhwgood/cloud-doc/blob/master/picture/%E4%B8%83%E7%89%9B%E4%BA%91%E6%96%87%E6%A1%A3.png)
+![设置](https://github.com/xhwgood/cloud-doc/blob/master/picture/%E4%BA%91%E6%96%87%E6%A1%A3-%E8%AE%BE%E7%BD%AE.png)
