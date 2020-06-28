@@ -98,6 +98,7 @@ app.on('ready', () => {
 			height: 400,
 			parent: mainWindow
 		}
+		// 设置面板的 url
 		const settingsFileLocation = `file://${path.join(
 			__dirname,
 			'./settings/settings.html'

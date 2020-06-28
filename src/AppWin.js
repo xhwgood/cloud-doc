@@ -1,5 +1,6 @@
 const { BrowserWindow } = require('electron')
 
+// 将 BrowserWindow 封装成一个常用的类
 class AppWin extends BrowserWindow {
 	constructor(config, urlLocation) {
 		const basicConfig = {

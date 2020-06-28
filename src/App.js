@@ -40,10 +40,15 @@ const saveFilesToStore = files => {
 }
 
 function App() {
+	// 所有文件
 	const [files, setFiles] = useState(fileStore.get('files') || {})
+	// 当前编辑的文件
 	const [activeFileID, setActiveFileID] = useState('')
+	// 所有打开的文件
 	const [openedFileIDs, setOpenedFileIDs] = useState([])
+	// 所有未保存的文件
 	const [unsavedFileIDs, setUnsavedFileIDs] = useState([])
+	// 搜索到的文件
 	const [searchedFiles, setSearchedFiles] = useState([])
 	const [loading, setLoading] = useState(false)
 	const filesArr = objToArr(files)
@@ -310,6 +315,7 @@ function App() {
 								onTabClick={tabClick}
 								onCloseTab={tabClose}
 							/>
+							{/* 根据 key 来区分不同的内容 */}
 							<SimpleMDE
 								key={activeFile && activeFile.id}
 								onChange={value => {
