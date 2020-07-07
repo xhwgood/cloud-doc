@@ -109,14 +109,10 @@ const FileList = ({ files, onFileClick, onSaveEdit, onFileDel }) => {
 								style={{ width: '90%' }}
 								value={value}
 								placeholder='请输入文件名'
-								onChange={e => {
-									setValue(e.target.value)
-								}}
+								onChange={e => setValue(e.target.value)}
 							/>
 							<button
-								onClick={() => {
-									closeSearch(file)
-								}}
+								onClick={() => closeSearch(file)}
 								type='button'
 								className='icon-button col-2'
 							>

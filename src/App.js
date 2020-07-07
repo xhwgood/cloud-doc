@@ -258,6 +258,7 @@ function App() {
 	})
 	const activeFile = files[activeFileID]
 	// 如果搜索列表中有就用搜索列表文件，否则用 files
+	// TODO：待简化
 	const fileListArr = searchedFiles.length ? searchedFiles : filesArr
 
 	useIpcRenderer({

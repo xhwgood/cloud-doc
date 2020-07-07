@@ -14,6 +14,7 @@ const FileSearch = ({ title, onFileSearch }) => {
 	const closeSearch = () => {
 		setInputActive(false)
 		setValue('')
+		// 搜索空字符串
 		onFileSearch('')
 	}
 
