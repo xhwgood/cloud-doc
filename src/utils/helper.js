@@ -1,14 +1,12 @@
-export const flattenArr = arr => {
-	return arr.reduce((map, item) => {
+export const flattenArr = arr =>
+	arr.reduce((map, item) => {
 		map[item.id] = item
 		return map
 	}, {})
-}
 
-export const objToArr = obj => {
-	return Object.keys(obj).map(key => obj[key])
-}
+export const objToArr = obj => Object.keys(obj).map(key => obj[key])
 
+// 获取父节点
 export const getParentNode = (node, parentClassName) => {
 	let current = node
 	while (current !== null) {

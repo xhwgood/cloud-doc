@@ -15,6 +15,7 @@ import 'easymde/dist/easymde.min.css'
 import fileHelper from './utils/fileHelper'
 import useIpcRenderer from './hooks/useIpcRenderer'
 
+// 若不使用 window.require，webpack 打包时会从 node_modules 中查找
 const { join, basename, dirname } = window.require('path')
 const { remote, ipcRenderer } = window.require('electron')
 const Store = window.require('electron-store')

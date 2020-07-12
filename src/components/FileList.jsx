@@ -49,7 +49,8 @@ const FileList = ({ files, onFileClick, onSaveEdit, onFileDel }) => {
 				}
 			}
 		],
-		'.file-list'
+		'.file-list',
+		[files]
 	)
 
 	useEffect(() => {
@@ -93,10 +94,8 @@ const FileList = ({ files, onFileClick, onSaveEdit, onFileDel }) => {
 								<FontAwesomeIcon size='lg' icon={faMarkdown} />
 							</span>
 							<span
-								onClick={() => {
-									onFileClick(file.id)
-								}}
-								className='col-6 c-link'
+								onClick={() => onFileClick(file.id)}
+								className='col-8 c-link'
 							>
 								{file.title}
 							</span>
