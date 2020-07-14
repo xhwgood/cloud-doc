@@ -14,30 +14,26 @@ let template = [
 			{
 				label: '新建',
 				accelerator: 'CmdOrCtrl+N',
-				click: (menuItem, browserWin, e) => {
+				click: (menuItem, browserWin) =>
 					browserWin.webContents.send('create-new-file')
-				}
 			},
 			{
 				label: '保存',
 				accelerator: 'CmdOrCtrl+S',
-				click: (menuItem, browserWin, e) => {
+				click: (menuItem, browserWin) =>
 					browserWin.webContents.send('save-edit-file')
-				}
 			},
 			{
 				label: '搜索',
 				accelerator: 'CmdOrCtrl+F',
-				click: (menuItem, browserWin, e) => {
+				click: (menuItem, browserWin) =>
 					browserWin.webContents.send('search-file')
-				}
 			},
 			{
 				label: '导入',
 				accelerator: 'CmdOrCtrl+O',
-				click: (menuItem, browserWin, e) => {
+				click: (menuItem, browserWin) =>
 					browserWin.webContents.send('import-file')
-				}
 			}
 		]
 	},
@@ -175,9 +171,7 @@ let template = [
 		submenu: [
 			{
 				label: '学习更多',
-				click: () => {
-					shell.openExternal('https://www.electronjs.org')
-				}
+				click: () => shell.openExternal('https://www.electronjs.org')
 			}
 		]
 	}
