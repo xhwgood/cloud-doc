@@ -78,25 +78,19 @@ let template = [
 			{
 				label: '设置',
 				accelerator: 'CmdOrCtrl+,',
-				click: () => {
-					ipcMain.emit('open-settings-window')
-				}
+				click: () => ipcMain.emit('open-settings-window')
 			},
 			{
 				label: '自动同步',
 				type: 'checkbox',
 				enabled: isConfig,
 				checked: autoSync,
-				click: () => {
-					settingsStore.set('autoSync', !autoSync)
-				}
+				click: () => settingsStore.set('autoSync', !autoSync)
 			},
 			{
 				label: '全部同步至云端',
 				enabled: isConfig,
-				click: () => {
-					ipcMain.emit('upload-all-to-qiniu')
-				}
+				click: () => ipcMain.emit('upload-all-to-qiniu')
 			},
 			{
 				label: '从云端下载到本地',
@@ -178,7 +172,6 @@ let template = [
 ]
 
 if (process.platform === 'darwin') {
-	// const name = app.getName()
 	const { name } = app
 	template.unshift({
 		label: name,
@@ -193,9 +186,7 @@ if (process.platform === 'darwin') {
 			{
 				label: `设置`,
 				accelerator: 'Command+,',
-				click: () => {
-					ipcMain.emit('open-settings-window')
-				}
+				click: () => ipcMain.emit('open-settings-window')
 			},
 			{
 				label: '服务',
@@ -225,9 +216,7 @@ if (process.platform === 'darwin') {
 			{
 				label: '退出',
 				accelerator: 'Command+Q',
-				click: () => {
-					app.quit()
-				}
+				click: () => app.quit()
 			}
 		]
 	})
@@ -235,9 +224,7 @@ if (process.platform === 'darwin') {
 	template[0].submenu.push({
 		label: '设置',
 		accelerator: 'Ctrl+,',
-		click: () => {
-			ipcMain.emit('open-settings-window')
-		}
+		click: () => ipcMain.emit('open-settings-window')
 	})
 }
 

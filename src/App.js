@@ -115,6 +115,7 @@ function App() {
 	}
 
 	const fileChange = (id, value) => {
+		// simpleMDE 会检测键盘事件，需要进行判断
 		if (value !== files[id].body) {
 			const newFile = { ...files[id], body: value }
 			setFiles({ ...files, [id]: newFile })
