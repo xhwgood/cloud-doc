@@ -70,17 +70,14 @@ app.on('ready', () => {
 				title: '安装更新',
 				message: '已下载完毕，应用将重启以进行更新'
 			},
-			() => {
-				setImmediate(() => autoUpdater.quitAndInstall())
-			}
+			() => setImmediate(() => autoUpdater.quitAndInstall())
 		)
 	})
 
 	const mainWinConfig = {
-		width: 1040,
+		width: 1440,
 		height: 768
 	}
-
 	const urlLocation = isDev
 		? 'http://localhost:3000'
 		: `file://${path.join(__dirname, './index.html')}`

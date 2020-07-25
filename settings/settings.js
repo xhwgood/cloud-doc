@@ -1,4 +1,4 @@
-const { remote,ipcRenderer } = require('electron')
+const { remote, ipcRenderer } = require('electron')
 const Store = require('electron-store')
 const settingsStore = new Store({ name: 'Settings' })
 const configArr = [
@@ -36,7 +36,7 @@ document.addEventListener('DOMContentLoaded', () => {
 					$('#savedFileLocation').value = res.filePaths[0]
 				}
 			})
-			.catch(err => console.log(err))
+			.catch(err => console.error('出错了：', err))
 	})
 	$('#settings-form').addEventListener('submit', e => {
 		e.preventDefault()
@@ -48,6 +48,7 @@ document.addEventListener('DOMContentLoaded', () => {
 		})
 		// 提交新配置后发送事件
 		ipcRenderer.send('config-is-saved')
+		// 关闭窗口
 		remote.getCurrentWindow().close()
 	})
 	$('.nav-tabs').addEventListener('click', e => {
